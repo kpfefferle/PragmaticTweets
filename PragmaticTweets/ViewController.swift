@@ -30,7 +30,10 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.reloadTweets()
+        reloadTweets()
+        let refresher = UIRefreshControl()
+        refresher.addTarget(self, action: "handleRefresh:", forControlEvents: .ValueChanged)
+        refreshControl = refresher
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +73,17 @@ class ViewController: UITableViewController {
         } else {
             NSLog("Can't send tweet")
         }
+    }
+    
+    @IBAction func handleRefresh(sender: AnyObject?) {
+        parsedTweets.append(
+            ParsedTweet(tweetText: "New row",
+                userName: "@refresh",
+                createdAt: NSDate().description,
+                userAvatarURL: defaultAvatarURL)
+        )
+        reloadTweets()
+        refreshControl?.endRefreshing()
     }
 
 }
