@@ -9,9 +9,7 @@
 import UIKit
 import Social
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var twitterWebView: UIWebView!
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,17 +20,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func handleShowMyTweetsTapped(sender: UIButton) {
-        reloadTweets()
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 5
     }
     
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return section + 1
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .Default, reuseIdentifier: nil)
+        cell.textLabel?.text = "Row \(indexPath.row)"
+        return cell
+    }
+
     func reloadTweets() {
-        guard let url = NSURL(string: "https://twitter.com/kpfefferle") else {
-            return
-        }
-        let urlRequest = NSURLRequest(URL: url)
-        twitterWebView.loadRequest(urlRequest)
     }
 
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
