@@ -8,6 +8,7 @@
 
 import XCTest
 
+
 class PragmaticTweetsUITests: XCTestCase {
         
     override func setUp() {
@@ -28,9 +29,12 @@ class PragmaticTweetsUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSendTweet() {
+        let app = XCUIApplication()
+        app.buttons["Send Tweet"].tap()
+        NSThread.sleepForTimeInterval(2.0)
+        XCTAssertTrue(app.navigationBars["Twitter"].buttons["Cancel"].exists)
+        
     }
     
 }
