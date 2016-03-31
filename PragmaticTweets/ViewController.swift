@@ -54,6 +54,7 @@ class ViewController: UITableViewController {
     }
 
     func reloadTweets() {
+        tableView.reloadData()
     }
 
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
