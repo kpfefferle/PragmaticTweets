@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import Accounts
 
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
@@ -32,7 +33,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         reloadTweets()
         let refresher = UIRefreshControl()
-        refresher.addTarget(self, action: "handleRefresh:", forControlEvents: .ValueChanged)
+        refresher.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), forControlEvents: .ValueChanged)
         refreshControl = refresher
     }
 
