@@ -73,7 +73,24 @@ class ViewController: UITableViewController {
                     NSLog("account access not granted")
                     return
                 }
-                NSLog("account access granted")
+                let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
+                guard twitterAccounts.count > 0 else {
+                    NSLog("no twitter accounts configured")
+                    return
+                }
+                let twitterParams = [
+                    "count": "100"
+                ]
+                let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
+                let request = SLRequest(forServiceType: SLServiceTypeTwitter,
+                    requestMethod: .GET,
+                    URL: twitterAPIURL,
+                    parameters: twitterParams)
+                request.account = twitterAccounts.first as! ACAccount
+                request.performRequestWithHandler({
+                    (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) -> Void in
+                    self.handleTwitterData(data, urlResponse: urlResponse, error: error)
+                })
         })
     }
 
@@ -96,6 +113,14 @@ class ViewController: UITableViewController {
         )
         reloadTweets()
         refreshControl?.endRefreshing()
+    }
+    
+    private func handleTwitterData(data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
+        guard let data = data else {
+            NSLog("handleTwitterData() recieved no data")
+            return
+        }
+        NSLog("handleTwitterData(), \(data.length) bytes")
     }
 
 }
