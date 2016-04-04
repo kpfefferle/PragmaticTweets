@@ -63,7 +63,18 @@ class ViewController: UITableViewController {
     }
 
     func reloadTweets() {
-        tableView.reloadData()
+        let accountStore = ACAccountStore()
+        let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+        accountStore.requestAccessToAccountsWithType(twitterAccountType,
+            options: nil,
+            completion: {
+                (granted: Bool, error: NSError!) -> Void in
+                guard granted else {
+                    NSLog("account access not granted")
+                    return
+                }
+                NSLog("account access granted")
+        })
     }
 
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
