@@ -121,6 +121,12 @@ class ViewController: UITableViewController {
             return
         }
         NSLog("handleTwitterData(), \(data.length) bytes")
+        do {
+            let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions([]))
+            NSLog("json data is:\n\(jsonObject)")
+        } catch let error as NSError {
+            NSLog("JSON error: \(error)")
+        }
     }
 
 }
