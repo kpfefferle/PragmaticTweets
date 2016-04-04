@@ -121,7 +121,9 @@ class ViewController: UITableViewController {
                 }
                 parsedTweets.append(parsedTweet)
             }
-            tableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
         } catch let error as NSError {
             NSLog("JSON error: \(error)")
         }
