@@ -43,9 +43,13 @@ class ViewController: UITableViewController {
         cell.userNameLabel.text = parsedTweet.userName
         cell.tweetTextLabel.text = parsedTweet.tweetText
         cell.createdAtLabel.text = parsedTweet.createdAt
-        if let url = parsedTweet.userAvatarURL, imageData = NSData(contentsOfURL: url) {
-            cell.avatarImageView.image = UIImage(data: imageData)
-        }
+        dispatch_async(dispatch_get_global_queue(QOS_CLASS_DEFAULT, 0), {
+            if let url = parsedTweet.userAvatarURL, imageData = NSData(contentsOfURL: url) {
+                dispatch_async(dispatch_get_main_queue(), {
+                    cell.avatarImageView.image = UIImage(data: imageData)
+                })
+            }
+        })
         return cell
     }
 
