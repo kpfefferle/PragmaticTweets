@@ -12,7 +12,7 @@ import Accounts
 
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
-class ViewController: UITableViewController {
+class RootViewController: UITableViewController {
     
     var parsedTweets: [ParsedTweet] = []
 
@@ -20,7 +20,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         reloadTweets()
         let refresher = UIRefreshControl()
-        refresher.addTarget(self, action: #selector(ViewController.handleRefresh(_:)), forControlEvents: .ValueChanged)
+        refresher.addTarget(self, action: #selector(RootViewController.handleRefresh(_:)), forControlEvents: .ValueChanged)
         refreshControl = refresher
     }
 
