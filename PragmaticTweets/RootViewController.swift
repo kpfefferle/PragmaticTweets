@@ -57,34 +57,14 @@ class RootViewController: UITableViewController {
     }
 
     func reloadTweets() {
-        let accountStore = ACAccountStore()
-        let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
-        accountStore.requestAccessToAccountsWithType(twitterAccountType,
-            options: nil,
-            completion: {
-                (granted: Bool, error: NSError!) -> Void in
-                guard granted else {
-                    NSLog("account access not granted")
-                    return
-                }
-                let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
-                guard twitterAccounts.count > 0 else {
-                    NSLog("no twitter accounts configured")
-                    return
-                }
-                let twitterParams = [
-                    "count": "100"
-                ]
-                let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json")
-                let request = SLRequest(forServiceType: SLServiceTypeTwitter,
-                    requestMethod: .GET,
-                    URL: twitterAPIURL,
-                    parameters: twitterParams)
-                request.account = twitterAccounts.first as! ACAccount
-                request.performRequestWithHandler({
-                    (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) -> Void in
-                    self.handleTwitterData(data, urlResponse: urlResponse, error: error)
-                })
+        let twitterParams = ["count": "100"]
+        guard let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/home_timeline.json") else {
+            return
+        }
+        sendTwitterRequest(twitterAPIURL,
+          params: twitterParams,
+          completion: { (data, urlResponse, error) -> Void in
+            self.handleTwitterData(data, urlResponse: urlResponse, error: error)
         })
     }
 
