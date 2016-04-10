@@ -6,35 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="fIa-z5-0Kt">
-            <objects>
-                <tableViewController id="qHj-1n-uV3" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ocr-8f-yZ2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LBH-CU-tv5">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LBH-CU-tv5" id="eZM-zq-XJy">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="qHj-1n-uV3" id="evT-TW-734"/>
-                            <outlet property="delegate" destination="qHj-1n-uV3" id="ntO-hJ-kub"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VXW-Ef-kkG"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dGj-Z8-K0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1592" y="-410"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Jf-Yp-fVt">
             <objects>
@@ -51,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="772" y="-410"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Tweets-->
         <scene sceneID="276-Qz-O7l">
             <objects>
                 <tableViewController id="EAd-Sh-JyM" customClass="RootViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,11 +120,11 @@
                             <outlet property="delegate" destination="EAd-Sh-JyM" id="ae2-ga-vgD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="DUo-DR-615"/>
+                    <navigationItem key="navigationItem" title="Tweets" id="DUo-DR-615"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSN-ex-ckG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="285"/>
+            <point key="canvasLocation" x="1546" y="-410"/>
         </scene>
     </scenes>
 </document>
