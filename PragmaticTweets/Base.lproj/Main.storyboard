@@ -120,7 +120,9 @@
                             <outlet property="delegate" destination="EAd-Sh-JyM" id="ae2-ga-vgD"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tweets" id="DUo-DR-615"/>
+                    <navigationItem key="navigationItem" title="Tweets" id="DUo-DR-615">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FaD-78-8Qp"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSN-ex-ckG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
