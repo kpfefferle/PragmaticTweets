@@ -68,7 +68,7 @@ class RootViewController: UITableViewController {
         })
     }
 
-    @IBAction func handleTweetButtonTapped(sender: UIButton) {
+    @IBAction func handleTweetButtonTapped(sender: AnyObject) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
             tweetVC.setInitialText("I just finished the first project in iOS 9 SDK Development. #pragios9")

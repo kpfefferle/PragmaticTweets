@@ -121,7 +121,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tweets" id="DUo-DR-615">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FaD-78-8Qp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="FaD-78-8Qp">
+                            <connections>
+                                <action selector="handleTweetButtonTapped:" destination="EAd-Sh-JyM" id="usH-nE-oVf"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSN-ex-ckG" userLabel="First Responder" sceneMemberID="firstResponder"/>
