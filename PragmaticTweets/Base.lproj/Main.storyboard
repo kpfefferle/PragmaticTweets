@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F24b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fIn-kc-OQF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fIn-kc-OQF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -112,7 +112,7 @@
                                     <outlet property="createdAtLabel" destination="R7j-R7-fuS" id="AJI-Um-ckG"/>
                                     <outlet property="tweetTextLabel" destination="PWR-FA-C9X" id="AUZ-lh-4bv"/>
                                     <outlet property="userNameLabel" destination="uk6-TX-7q7" id="Fra-DG-hZo"/>
-                                    <segue destination="mbq-hF-3sA" kind="show" id="Rot-80-3Jz"/>
+                                    <segue destination="mbq-hF-3sA" kind="show" identifier="showTweetDetailsSegue" id="Rot-80-3Jz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

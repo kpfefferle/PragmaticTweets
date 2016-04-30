@@ -115,6 +115,15 @@ class RootViewController: UITableViewController {
             NSLog("JSON error: \(error)")
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showTweetDetailsSegue" {
+            if let row = tableView?.indexPathForSelectedRow?.row {
+                let parsedTweet = parsedTweets[row]
+                NSLog("tapped on \(parsedTweet.tweetText)")
+            }
+        }
+    }
 
 }
 
