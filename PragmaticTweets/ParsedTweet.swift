@@ -9,6 +9,7 @@
 import Foundation
 
 struct ParsedTweet {
+    var tweetIdString: String?
     var tweetText: String?
     var userName: String?
     var createdAt: String?

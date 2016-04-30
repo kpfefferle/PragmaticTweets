@@ -98,6 +98,7 @@ class RootViewController: UITableViewController {
             parsedTweets.removeAll()
             for tweetDict in jsonArray {
                 var parsedTweet = ParsedTweet()
+                parsedTweet.tweetIdString = tweetDict["id_str"] as? String
                 parsedTweet.tweetText = tweetDict["text"] as? String
                 parsedTweet.createdAt = tweetDict["created_at"] as? String
                 if let userDict = tweetDict["user"] as? [String : AnyObject] {
@@ -120,7 +121,7 @@ class RootViewController: UITableViewController {
         if segue.identifier == "showTweetDetailsSegue" {
             if let row = tableView?.indexPathForSelectedRow?.row {
                 let parsedTweet = parsedTweets[row]
-                NSLog("tapped on \(parsedTweet.tweetText)")
+                NSLog("tapped on \(parsedTweet.tweetIdString)")
             }
         }
     }
