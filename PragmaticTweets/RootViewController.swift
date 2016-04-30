@@ -119,9 +119,10 @@ class RootViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showTweetDetailsSegue" {
-            if let row = tableView?.indexPathForSelectedRow?.row {
+            if let row = tableView?.indexPathForSelectedRow?.row,
+              tweetDetailsVC = segue.destinationViewController as? TweetDetailViewController {
                 let parsedTweet = parsedTweets[row]
-                NSLog("tapped on \(parsedTweet.tweetIdString)")
+                tweetDetailsVC.tweetIdString = parsedTweet.tweetIdString
             }
         }
     }

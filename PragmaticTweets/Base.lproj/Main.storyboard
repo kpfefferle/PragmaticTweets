@@ -136,7 +136,7 @@
         <!--Tweet-->
         <scene sceneID="PLb-Xi-EeC">
             <objects>
-                <viewController id="mbq-hF-3sA" sceneMemberID="viewController">
+                <viewController id="mbq-hF-3sA" customClass="TweetDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="djV-lq-kK8"/>
                         <viewControllerLayoutGuide type="bottom" id="UTJ-qZ-iNK"/>
