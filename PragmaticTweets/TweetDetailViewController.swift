@@ -15,6 +15,11 @@ class TweetDetailViewController: UIViewController {
     @IBOutlet weak var userScreenNameLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
     @IBOutlet weak var tweetImageView: UIImageView!
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadTweetDetails()
+    }
 
     var tweetIdString: String? {
         didSet {
@@ -23,6 +28,47 @@ class TweetDetailViewController: UIViewController {
     }
     
     func reloadTweetDetails() {
+        guard let tweetIdString = tweetIdString else {
+            return
+        }
+        if let twitterAPIURL = NSURL(string: "https://api.twitter.com/1.1/statuses/show.json") {
+            let twitterParams = ["id": tweetIdString]
+            sendTwitterRequest(twitterAPIURL,
+              params: twitterParams,
+              completion: { (data, urlResponse, error) -> Void in
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.handleTwitterData(data, urlResponse: urlResponse, error: error)
+                })
+            })
+        }
+    }
+    
+    func handleTwitterData(data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
+        guard let data = data else {
+            NSLog("handleTwitterData() received no data")
+            return
+        }
+        NSLog("handleTwitterData(), \(data.length) bytes")
+        do {
+            let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions([]))
+            guard let tweetDict = jsonObject as? [String : AnyObject] else {
+                NSLog("handleTwitterData() didn't get a dictionary")
+                return
+            }
+            NSLog("tweetDict: \(tweetDict)")
+            self.tweetTextLabel.text = tweetDict["text"] as? String
+            if let userDict = tweetDict["user"] as? [String : AnyObject] {
+                self.userRealNameLabel.text = (userDict["name"] as! String)
+                self.userScreenNameLabel.text = (userDict["screen_name"] as! String)
+                self.userImageButton.setTitle(nil, forState: .Normal)
+                if let userImageURL = NSURL(string: userDict["profile_image_url_https"] as! String),
+                  userImageData = NSData(contentsOfURL: userImageURL) {
+                    self.userImageButton.setImage(UIImage(data: userImageData), forState: .Normal)
+                }
+            }
+        } catch let error as NSError {
+            NSLog("JSON error: \(error)")
+        }
     }
     
 }
