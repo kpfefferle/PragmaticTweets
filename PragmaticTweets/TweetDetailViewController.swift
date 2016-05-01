@@ -65,6 +65,13 @@ class TweetDetailViewController: UIViewController {
                   userImageData = NSData(contentsOfURL: userImageURL) {
                     self.userImageButton.setImage(UIImage(data: userImageData), forState: .Normal)
                 }
+                if let entities = tweetDict["entities"] as? [String : AnyObject],
+                  media = entities["media"] as? [[String : AnyObject]],
+                  mediaString = media[0]["media_url_https"] as? String,
+                  mediaURL = NSURL(string: mediaString),
+                  mediaData = NSData(contentsOfURL: mediaURL) {
+                    tweetImageView.image = UIImage(data: mediaData)
+                }
             }
         } catch let error as NSError {
             NSLog("JSON error: \(error)")
