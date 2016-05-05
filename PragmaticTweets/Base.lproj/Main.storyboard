@@ -210,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="2316" y="-410"/>
         </scene>
-        <!--View Controller-->
+        <!--User Detail View Controller-->
         <scene sceneID="TXz-PD-3pa">
             <objects>
-                <viewController id="0Gz-5C-Txa" sceneMemberID="viewController">
+                <viewController id="0Gz-5C-Txa" customClass="UserDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="S2c-rP-gvu"/>
                         <viewControllerLayoutGuide type="bottom" id="SaX-x0-oyh"/>
@@ -276,6 +276,13 @@
                             <constraint firstItem="wed-7H-wy5" firstAttribute="top" secondItem="uKk-DM-aAL" secondAttribute="topMargin" id="SJp-qE-q32"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userDescriptionLabel" destination="aEw-Ex-Glp" id="9XF-rg-idW"/>
+                        <outlet property="userImageView" destination="9ZQ-hw-eaR" id="5CZ-EP-ijG"/>
+                        <outlet property="userLocationLabel" destination="XL8-L3-dP5" id="Y2h-O0-lMK"/>
+                        <outlet property="userRealNameLabel" destination="rbR-19-Pji" id="hPk-xn-6HC"/>
+                        <outlet property="userScreenNameLabel" destination="sBF-pT-SLt" id="drv-Zp-tPb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6W-4W-jTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A9700031CDAD76100E6F518 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9700021CDAD76100E6F518 /* UserDetailViewController.swift */; };
 		0A9D23C01CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */; };
 		0AA4A3761CD43B0B00A69D42 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4A3751CD43B0B00A69D42 /* TweetDetailViewController.swift */; };
 		0AB7881F1CAA18CD00858B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7881E1CAA18CD00858B4C /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9700021CDAD76100E6F518 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIRequestUtilities.swift; sourceTree = "<group>"; };
 		0AA4A3751CD43B0B00A69D42 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		0AB7881B1CAA18CD00858B4C /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9700011CDAD72600E6F518 /* UserDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				0A9700021CDAD76100E6F518 /* UserDetailViewController.swift */,
+			);
+			name = UserDetailVC;
+			sourceTree = "<group>";
+		};
 		0A9D23BD1CB98690007FAE4F /* RootVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +144,7 @@
 				0AB7881E1CAA18CD00858B4C /* AppDelegate.swift */,
 				0A9D23BD1CB98690007FAE4F /* RootVC */,
 				0AA4A3741CD43A9700A69D42 /* TweetDetailVC */,
+				0A9700011CDAD72600E6F518 /* UserDetailVC */,
 				0A9D23BE1CB986A9007FAE4F /* TwitterUtilities */,
 				0AB788221CAA18CD00858B4C /* Main.storyboard */,
 				0AB788251CAA18CD00858B4C /* Assets.xcassets */,
@@ -292,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9700031CDAD76100E6F518 /* UserDetailViewController.swift in Sources */,
 				0A9D23C01CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift in Sources */,
 				0AB788591CAD791B00858B4C /* ParsedTweetCell.swift in Sources */,
 				0AB788511CAD6C0600858B4C /* ParsedTweet.swift in Sources */,
