@@ -78,4 +78,11 @@ class TweetDetailViewController: UIViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let userDetailVC = segue.destinationViewController as? UserDetailViewController
+          where segue.identifier == "showUserDetailSegue" {
+            userDetailVC.screenName = userScreenNameLabel.text
+        }
+    }
+    
 }
