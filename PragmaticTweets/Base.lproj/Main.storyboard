@@ -223,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wed-7H-wy5">
-                                <rect key="frame" x="20" y="0.0" width="560" height="237"/>
+                                <rect key="frame" x="20" y="20" width="560" height="237"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9ZQ-hw-eaR">
                                         <rect key="frame" x="230" y="0.0" width="100" height="100"/>
@@ -265,6 +265,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hg-Sk-3iv">
                                         <rect key="frame" x="262" y="207" width="37" height="30"/>
                                         <state key="normal" title="Done"/>
+                                        <connections>
+                                            <segue destination="9QP-dw-M6E" kind="unwind" unwindAction="unwindToTweetDetailVC:" id="nRZ-CT-V4q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -274,7 +277,13 @@
                             <constraint firstItem="wed-7H-wy5" firstAttribute="leading" secondItem="uKk-DM-aAL" secondAttribute="leadingMargin" id="Ngk-8y-m6X"/>
                             <constraint firstItem="wed-7H-wy5" firstAttribute="trailing" secondItem="uKk-DM-aAL" secondAttribute="trailingMargin" id="O03-PM-3d1"/>
                             <constraint firstItem="wed-7H-wy5" firstAttribute="top" secondItem="uKk-DM-aAL" secondAttribute="topMargin" id="SJp-qE-q32"/>
+                            <constraint firstItem="wed-7H-wy5" firstAttribute="top" secondItem="S2c-rP-gvu" secondAttribute="bottom" id="SK1-sc-TZb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SJp-qE-q32"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="userDescriptionLabel" destination="aEw-Ex-Glp" id="9XF-rg-idW"/>
@@ -285,6 +294,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6W-4W-jTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9QP-dw-M6E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3075" y="-410"/>
         </scene>
