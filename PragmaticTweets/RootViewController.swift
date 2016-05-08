@@ -137,6 +137,12 @@ class RootViewController: UITableViewController, UISplitViewControllerDelegate {
               tweetDetailVC = tweetDetailNav.viewControllers[0] as? TweetDetailViewController {
                 tweetDetailVC.tweetIdString = parsedTweet.tweetIdString
             }
+        } else {
+            if let storyboard = storyboard,
+              detailVC = storyboard.instantiateViewControllerWithIdentifier("TweetDetailVC") as? TweetDetailViewController {
+                detailVC.tweetIdString = parsedTweet.tweetIdString
+                splitViewController?.showDetailViewController(detailVC, sender: self)
+            }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
