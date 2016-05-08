@@ -126,6 +126,17 @@ class RootViewController: UITableViewController {
             }
         }
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let parsedTweet = parsedTweets[indexPath.row]
+        if let splitViewController = splitViewController where splitViewController.viewControllers.count > 1 {
+            if let tweetDetailNav = splitViewController.viewControllers[1] as? UINavigationController,
+              tweetDetailVC = tweetDetailNav.viewControllers[0] as? TweetDetailViewController {
+                tweetDetailVC.tweetIdString = parsedTweet.tweetIdString
+            }
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
 
 }
 
