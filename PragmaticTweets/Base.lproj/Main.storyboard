@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F31a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fIn-kc-OQF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F31a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QtG-dJ-meY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,12 +15,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="EAd-Sh-JyM" kind="relationship" relationship="rootViewController" id="5yV-Cy-ltV"/>
+                        <segue destination="mbq-hF-3sA" kind="relationship" relationship="rootViewController" id="j7Q-II-5oe"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVw-fz-z3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="-410"/>
+            <point key="canvasLocation" x="1512" y="1052"/>
         </scene>
         <!--Tweets-->
         <scene sceneID="276-Qz-O7l">
@@ -112,7 +112,6 @@
                                     <outlet property="createdAtLabel" destination="R7j-R7-fuS" id="AJI-Um-ckG"/>
                                     <outlet property="tweetTextLabel" destination="PWR-FA-C9X" id="AUZ-lh-4bv"/>
                                     <outlet property="userNameLabel" destination="uk6-TX-7q7" id="Fra-DG-hZo"/>
-                                    <segue destination="mbq-hF-3sA" kind="show" identifier="showTweetDetailsSegue" id="Rot-80-3Jz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -131,7 +130,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSN-ex-ckG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1546" y="-410"/>
+            <point key="canvasLocation" x="2250" y="317"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FjT-AN-Xoe">
+            <objects>
+                <navigationController id="70s-Qh-Zvb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wAM-yq-m0s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EAd-Sh-JyM" kind="relationship" relationship="rootViewController" id="wFm-Gg-Rfx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fJI-Tc-D2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="317"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="0Ot-vQ-5Lp">
+            <objects>
+                <splitViewController id="QtG-dJ-meY" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="70s-Qh-Zvb" kind="relationship" relationship="masterViewController" id="cDb-GO-QQ7"/>
+                        <segue destination="fIn-kc-OQF" kind="relationship" relationship="detailViewController" id="Hnb-zs-C1X"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3VS-9d-33e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="649"/>
         </scene>
         <!--Tweet-->
         <scene sceneID="PLb-Xi-EeC">
@@ -208,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39e-nj-5Wu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2316" y="-410"/>
+            <point key="canvasLocation" x="2250" y="1052"/>
         </scene>
         <!--User Detail View Controller-->
         <scene sceneID="TXz-PD-3pa">
@@ -296,7 +324,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y6W-4W-jTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="9QP-dw-M6E" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3075" y="-410"/>
+            <point key="canvasLocation" x="3009" y="1052"/>
         </scene>
     </scenes>
 </document>
