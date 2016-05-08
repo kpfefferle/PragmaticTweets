@@ -71,6 +71,8 @@ class TweetDetailViewController: UIViewController {
                   mediaURL = NSURL(string: mediaString),
                   mediaData = NSData(contentsOfURL: mediaURL) {
                     tweetImageView.image = UIImage(data: mediaData)
+                } else {
+                    tweetImageView.image = nil
                 }
             }
         } catch let error as NSError {
