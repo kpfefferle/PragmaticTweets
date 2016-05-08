@@ -24,6 +24,7 @@ class RootViewController: UITableViewController, UISplitViewControllerDelegate {
         refreshControl = refresher
         if let splitViewController = splitViewController {
             splitViewController.delegate = self
+            addShowSplitPrimaryButton(splitViewController)
         }
     }
 
@@ -152,6 +153,20 @@ class RootViewController: UITableViewController, UISplitViewControllerDelegate {
       ontoPrimaryViewController primaryViewController: UIViewController)
       -> Bool {
         return true
+    }
+    
+    func addShowSplitPrimaryButton(splitViewController: UISplitViewController) {
+        let barButtonItem = splitViewController.displayModeButtonItem()
+        if let detailNav = splitViewController.viewControllers.last as? UINavigationController {
+            detailNav.topViewController?.navigationItem.leftBarButtonItem = barButtonItem
+        }
+    }
+    
+    func splitViewController(svc: UISplitViewController,
+      willChangeToDisplayMode displayMode: UISplitViewControllerDisplayMode) {
+        if displayMode == .PrimaryHidden {
+            addShowSplitPrimaryButton(svc)
+        }
     }
 
 }
