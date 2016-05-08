@@ -12,7 +12,7 @@ import Accounts
 
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
-class RootViewController: UITableViewController {
+class RootViewController: UITableViewController, UISplitViewControllerDelegate {
     
     var parsedTweets: [ParsedTweet] = []
 
@@ -22,6 +22,9 @@ class RootViewController: UITableViewController {
         let refresher = UIRefreshControl()
         refresher.addTarget(self, action: #selector(RootViewController.handleRefresh(_:)), forControlEvents: .ValueChanged)
         refreshControl = refresher
+        if let splitViewController = splitViewController {
+            splitViewController.delegate = self
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -136,6 +139,13 @@ class RootViewController: UITableViewController {
             }
         }
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
+    }
+    
+    func splitViewController(splitViewController: UISplitViewController,
+      collapseSecondaryViewController secondaryViewController: UIViewController,
+      ontoPrimaryViewController primaryViewController: UIViewController)
+      -> Bool {
+        return true
     }
 
 }
