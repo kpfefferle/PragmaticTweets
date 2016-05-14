@@ -276,6 +276,7 @@
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Lxf-He-giw" appends="YES" id="gfP-cE-vhS"/>
                                     <outletCollection property="gestureRecognizers" destination="42Y-ml-6DP" appends="YES" id="C55-OC-QCl"/>
+                                    <outletCollection property="gestureRecognizers" destination="dgD-XD-AM6" appends="YES" id="6zw-2M-j7e"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-EF-auA">
@@ -310,6 +311,11 @@
                         <action selector="handleDoubleTapGesture:" destination="LAK-3x-sGJ" id="EH8-iz-mGk"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pinchGestureRecognizer id="dgD-XD-AM6">
+                    <connections>
+                        <action selector="handlePinchGesture:" destination="LAK-3x-sGJ" id="QO2-cN-ACo"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3751" y="1052"/>
         </scene>
