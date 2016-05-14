@@ -266,19 +266,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LFQ-Cl-b1f">
-                                <rect key="frame" x="160" y="160" width="280" height="280"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="aJj-YO-6Ne"/>
-                                    <constraint firstAttribute="height" constant="280" id="u8I-tj-wmb"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Lxf-He-giw" appends="YES" id="gfP-cE-vhS"/>
-                                    <outletCollection property="gestureRecognizers" destination="42Y-ml-6DP" appends="YES" id="C55-OC-QCl"/>
-                                    <outletCollection property="gestureRecognizers" destination="dgD-XD-AM6" appends="YES" id="6zw-2M-j7e"/>
-                                </connections>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-EF-auA">
                                 <rect key="frame" x="277" y="550" width="47" height="30"/>
                                 <state key="normal" title="Done"/>
@@ -286,17 +273,41 @@
                                     <segue destination="0Fi-xm-gae" kind="unwind" unwindAction="unwindToUserDetailVC:" id="Zwf-u7-PQ3"/>
                                 </connections>
                             </button>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3R-4s-VPf">
+                                <rect key="frame" x="160" y="160" width="280" height="280"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bmQ-iN-KOC">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="280"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="280" id="Mbc-RM-9yJ"/>
+                                            <constraint firstAttribute="height" constant="280" id="QDa-G7-eYt"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="8ZK-Hy-cg7"/>
+                                    <constraint firstAttribute="width" constant="280" id="Ax5-lA-l5Q"/>
+                                    <constraint firstItem="bmQ-iN-KOC" firstAttribute="centerX" secondItem="K3R-4s-VPf" secondAttribute="centerX" id="JJt-Zm-VZi"/>
+                                    <constraint firstItem="bmQ-iN-KOC" firstAttribute="centerY" secondItem="K3R-4s-VPf" secondAttribute="centerY" id="lp2-4L-Ex4"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Lxf-He-giw" appends="YES" id="Ovu-eO-6Ef"/>
+                                    <outletCollection property="gestureRecognizers" destination="42Y-ml-6DP" appends="YES" id="cxc-o5-0ms"/>
+                                    <outletCollection property="gestureRecognizers" destination="dgD-XD-AM6" appends="YES" id="Tau-vq-sEk"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LFQ-Cl-b1f" firstAttribute="centerX" secondItem="SL9-3h-kBQ" secondAttribute="centerX" id="j76-0i-RBn"/>
+                            <constraint firstItem="K3R-4s-VPf" firstAttribute="centerY" secondItem="SL9-3h-kBQ" secondAttribute="centerY" id="K04-1S-Bog"/>
                             <constraint firstItem="oPQ-EF-auA" firstAttribute="centerX" secondItem="SL9-3h-kBQ" secondAttribute="centerX" id="jrN-nL-Wyi"/>
-                            <constraint firstItem="LFQ-Cl-b1f" firstAttribute="centerY" secondItem="SL9-3h-kBQ" secondAttribute="centerY" id="pQn-M0-Ki0"/>
+                            <constraint firstItem="K3R-4s-VPf" firstAttribute="centerX" secondItem="SL9-3h-kBQ" secondAttribute="centerX" id="oa7-DU-cs1"/>
                             <constraint firstItem="11B-v1-UW8" firstAttribute="top" secondItem="oPQ-EF-auA" secondAttribute="bottom" constant="20" id="sTo-qJ-Hkp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="userImageView" destination="LFQ-Cl-b1f" id="b0l-Dy-hlI"/>
+                        <outlet property="userImageView" destination="bmQ-iN-KOC" id="swC-yd-QGu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Mk-dj-iH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
