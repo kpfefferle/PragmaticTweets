@@ -35,4 +35,8 @@ class UserImageDetailViewController: UIViewController {
         }
     }
 
+    @IBAction func handleDoubleTapGesture(sender: UITapGestureRecognizer) {
+        userImageView.transform = CGAffineTransformIdentity
+    }
+    
 }

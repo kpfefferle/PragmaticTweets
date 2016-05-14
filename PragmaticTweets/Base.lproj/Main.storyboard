@@ -275,6 +275,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Lxf-He-giw" appends="YES" id="gfP-cE-vhS"/>
+                                    <outletCollection property="gestureRecognizers" destination="42Y-ml-6DP" appends="YES" id="C55-OC-QCl"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-EF-auA">
@@ -304,6 +305,11 @@
                         <action selector="handlePanGesture:" destination="LAK-3x-sGJ" id="mVK-hY-jhl"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="42Y-ml-6DP">
+                    <connections>
+                        <action selector="handleDoubleTapGesture:" destination="LAK-3x-sGJ" id="EH8-iz-mGk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3751" y="1052"/>
         </scene>
