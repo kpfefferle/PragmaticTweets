@@ -60,4 +60,7 @@ class UserDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func unwindToUserDetailVC(segue: UIStoryboardSegue) {
+    }
+    
 }
