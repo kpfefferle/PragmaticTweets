@@ -11,6 +11,7 @@ import UIKit
 class UserImageDetailViewController: UIViewController {
     
     var userImageURL: NSURL?
+    var preGestureTransform: CGAffineTransform?
     
     @IBOutlet weak var userImageView: UIImageView!
     
@@ -21,4 +22,17 @@ class UserImageDetailViewController: UIViewController {
             userImageView.image = UIImage(data: imageData)
         }
     }
+
+    @IBAction func handlePanGesture(sender: UIPanGestureRecognizer) {
+        if sender.state == .Began {
+            preGestureTransform = userImageView.transform
+        }
+        if sender.state == .Began ||
+          sender.state == .Changed {
+            let translation = sender.translationInView(userImageView)
+            let translatedTransform = CGAffineTransformTranslate(preGestureTransform!, translation.x, translation.y)
+            userImageView.transform = translatedTransform
+        }
+    }
+
 }
