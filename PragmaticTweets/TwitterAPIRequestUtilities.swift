@@ -26,6 +26,12 @@ public func sendTwitterRequest(requestURL: NSURL,
         let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
         guard twitterAccounts.count > 0 else {
             NSLog("no twitter accounts configured")
+            completion(nil,
+              nil,
+                NSError(domain: "PragmaticTweets",
+                  code: 1000,
+                  userInfo: [NSLocalizedDescriptionKey : "no Twitter accounts configured"])
+            )
             return
         }
         let request = SLRequest(forServiceType: SLServiceTypeTwitter,

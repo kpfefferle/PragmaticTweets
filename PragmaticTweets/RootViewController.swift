@@ -91,6 +91,17 @@ class RootViewController: UITableViewController, UISplitViewControllerDelegate {
     }
     
     private func handleTwitterData(data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
+        if let error = error {
+            dispatch_async(dispatch_get_main_queue()) {
+                let alert = UIAlertController(title: "Error",
+                  message: "An error occurred: \(error.localizedDescription)",
+                  preferredStyle: .Alert)
+                let ok = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+                alert.addAction(ok)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+            return
+        }
         guard let data = data else {
             NSLog("handleTwitterData() recieved no data")
             return
