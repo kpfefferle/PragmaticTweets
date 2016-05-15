@@ -164,6 +164,9 @@
                             <segue destination="QtG-dJ-meY" kind="embed" identifier="embeddedSplitViewSegue" id="0Hf-8m-Ifi"/>
                         </connections>
                     </containerView>
+                    <connections>
+                        <segue destination="6eN-HI-esp" kind="presentation" identifier="showUserFromURLSegue" id="2Om-3x-K2H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5SY-vi-bOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -451,6 +454,99 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3009" y="1052"/>
+        </scene>
+        <!--User Detail from URL-->
+        <scene sceneID="8Ri-UZ-1fd">
+            <objects>
+                <viewController id="6eN-HI-esp" userLabel="User Detail from URL" customClass="UserDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RR6-F2-7Bs"/>
+                        <viewControllerLayoutGuide type="bottom" id="fWb-hf-d0f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EUD-MC-TAx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SIt-CF-CWj">
+                                <rect key="frame" x="20" y="20" width="560" height="237"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="66i-fK-evR">
+                                        <rect key="frame" x="230" y="0.0" width="100" height="100"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="ejJ-2N-PRl"/>
+                                            <constraint firstAttribute="height" constant="100" id="jFU-QP-w5p"/>
+                                            <constraint firstAttribute="width" constant="100" id="nvu-Mk-q5n"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ejJ-2N-PRl"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="s9N-br-oj1" appends="YES" id="mS6-IZ-RlC"/>
+                                        </connections>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJM-yg-9tv">
+                                        <rect key="frame" x="215" y="100" width="132" height="33"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Screen Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx9-QJ-BVO">
+                                        <rect key="frame" x="217" y="133" width="127" height="26"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3u-Ok-PYA">
+                                        <rect key="frame" x="240" y="158" width="81" height="26"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmm-1R-dJL">
+                                        <rect key="frame" x="232" y="184" width="98" height="23"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGt-Hj-QV7">
+                                        <rect key="frame" x="262" y="207" width="37" height="30"/>
+                                        <state key="normal" title="Done"/>
+                                        <connections>
+                                            <segue destination="iII-zc-K3U" kind="unwind" unwindAction="unwindToTweetDetailVC:" id="bzQ-3X-6uV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SIt-CF-CWj" firstAttribute="leading" secondItem="EUD-MC-TAx" secondAttribute="leadingMargin" id="2pJ-t6-mQc"/>
+                            <constraint firstItem="SIt-CF-CWj" firstAttribute="top" secondItem="EUD-MC-TAx" secondAttribute="topMargin" id="4Mv-Zd-lv4"/>
+                            <constraint firstItem="SIt-CF-CWj" firstAttribute="top" secondItem="RR6-F2-7Bs" secondAttribute="bottom" id="7G5-XJ-mDO"/>
+                            <constraint firstItem="SIt-CF-CWj" firstAttribute="trailing" secondItem="EUD-MC-TAx" secondAttribute="trailingMargin" id="CAh-Pv-xKg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4Mv-Zd-lv4"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="userDescriptionLabel" destination="Hmm-1R-dJL" id="IE8-Ff-e5X"/>
+                        <outlet property="userImageView" destination="66i-fK-evR" id="ent-hc-CZ8"/>
+                        <outlet property="userLocationLabel" destination="V3u-Ok-PYA" id="GPl-hO-w8u"/>
+                        <outlet property="userRealNameLabel" destination="NJM-yg-9tv" id="aJQ-sD-Szg"/>
+                        <outlet property="userScreenNameLabel" destination="Tx9-QJ-BVO" id="tzK-Js-8oO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8o-bc-dYo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iII-zc-K3U" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="s9N-br-oj1"/>
+            </objects>
+            <point key="canvasLocation" x="-49" y="1392"/>
         </scene>
     </scenes>
 </document>

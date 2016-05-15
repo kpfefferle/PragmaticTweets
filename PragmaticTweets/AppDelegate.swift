@@ -41,6 +41,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(application: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+        var showedUserDetail = false
+        guard let query = url.query where url.path == "/user" else {
+            return false
+        }
+        let components = query.componentsSeparatedByString("=")
+        if components.count > 1 && components[0] == "screenname" {
+            if let sizeClassVC = self.window?.rootViewController as? SizeClassOverrideViewController {
+                sizeClassVC.performSegueWithIdentifier("showUserFromURLSegue", sender: self)
+                showedUserDetail = true
+            }
+        }
+        return showedUserDetail
+    }
 
 }
 
