@@ -10,7 +10,7 @@ import Foundation
 import Social
 import Accounts
 
-func sendTwitterRequest(requestURL: NSURL,
+public func sendTwitterRequest(requestURL: NSURL,
   params: [String: String],
   completion: SLRequestHandler) {
     let accountStore = ACAccountStore()

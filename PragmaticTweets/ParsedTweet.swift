@@ -8,10 +8,13 @@
 
 import Foundation
 
-struct ParsedTweet {
-    var tweetIdString: String?
-    var tweetText: String?
-    var userName: String?
-    var createdAt: String?
-    var userAvatarURL: NSURL?
+public struct ParsedTweet {
+    public var tweetIdString: String?
+    public var tweetText: String?
+    public var userName: String?
+    public var createdAt: String?
+    public var userAvatarURL: NSURL?
+    
+    public init() {
+    }
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2016 Kevin Pfefferle. All rights reserved.
 //
 
+import PragmaticTweetsFramework
 import UIKit
 
 class TweetDetailViewController: UIViewController {

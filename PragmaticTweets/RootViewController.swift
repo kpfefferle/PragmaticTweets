@@ -9,6 +9,7 @@
 import Accounts
 import CoreImage
 import Photos
+import PragmaticTweetsFramework
 import Social
 import UIKit
 

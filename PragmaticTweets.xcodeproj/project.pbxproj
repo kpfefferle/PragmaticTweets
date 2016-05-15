@@ -12,10 +12,14 @@
 		0A2227D41CE8095100D88FB3 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2227D31CE8095100D88FB3 /* KeyboardViewController.swift */; };
 		0A2227D81CE8095100D88FB3 /* PragmaticTweepsKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A2227D11CE8095100D88FB3 /* PragmaticTweepsKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0A2227DE1CE80AAD00D88FB3 /* PragmaticTweepsKeyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2227DD1CE80AAD00D88FB3 /* PragmaticTweepsKeyboard.storyboard */; };
-		0A2227DF1CE80FE000D88FB3 /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB788501CAD6C0600858B4C /* ParsedTweet.swift */; };
-		0A2227E01CE80FE000D88FB3 /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */; };
+		0A2227E91CE90E2200D88FB3 /* PragmaticTweetsFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2227E81CE90E2200D88FB3 /* PragmaticTweetsFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A2227F01CE90E2200D88FB3 /* PragmaticTweetsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2227E61CE90E2200D88FB3 /* PragmaticTweetsFramework.framework */; };
+		0A2227F71CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2227F61CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.swift */; };
+		0A2227FB1CE90E2200D88FB3 /* PragmaticTweetsFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2227E61CE90E2200D88FB3 /* PragmaticTweetsFramework.framework */; };
+		0A2227FC1CE90E2200D88FB3 /* PragmaticTweetsFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0A2227E61CE90E2200D88FB3 /* PragmaticTweetsFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0A2228041CE90E8900D88FB3 /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB788501CAD6C0600858B4C /* ParsedTweet.swift */; };
+		0A2228051CE90E8F00D88FB3 /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */; };
 		0A9700031CDAD76100E6F518 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9700021CDAD76100E6F518 /* UserDetailViewController.swift */; };
-		0A9D23C01CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */; };
 		0AA4A3761CD43B0B00A69D42 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4A3751CD43B0B00A69D42 /* TweetDetailViewController.swift */; };
 		0AB7881F1CAA18CD00858B4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7881E1CAA18CD00858B4C /* AppDelegate.swift */; };
 		0AB788211CAA18CD00858B4C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB788201CAA18CD00858B4C /* RootViewController.swift */; };
@@ -24,7 +28,6 @@
 		0AB788291CAA18CD00858B4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB788271CAA18CD00858B4C /* LaunchScreen.storyboard */; };
 		0AB788341CAA18CE00858B4C /* PragmaticTweetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB788331CAA18CE00858B4C /* PragmaticTweetsTests.swift */; };
 		0AB7883F1CAA18CE00858B4C /* PragmaticTweetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB7883E1CAA18CE00858B4C /* PragmaticTweetsUITests.swift */; };
-		0AB788511CAD6C0600858B4C /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB788501CAD6C0600858B4C /* ParsedTweet.swift */; };
 		0AB788591CAD791B00858B4C /* ParsedTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB788581CAD791B00858B4C /* ParsedTweetCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0A2227D01CE8095100D88FB3;
 			remoteInfo = PragmaticTweepsKeyboard;
+		};
+		0A2227F11CE90E2200D88FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB788131CAA18CD00858B4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A2227E51CE90E2200D88FB3;
+			remoteInfo = PragmaticTweetsFramework;
+		};
+		0A2227F31CE90E2200D88FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB788131CAA18CD00858B4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB7881A1CAA18CD00858B4C;
+			remoteInfo = PragmaticTweets;
+		};
+		0A2227F91CE90E2200D88FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB788131CAA18CD00858B4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A2227E51CE90E2200D88FB3;
+			remoteInfo = PragmaticTweetsFramework;
+		};
+		0A2228061CE90FEC00D88FB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB788131CAA18CD00858B4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A2227E51CE90E2200D88FB3;
+			remoteInfo = PragmaticTweetsFramework;
 		};
 		0AB788301CAA18CE00858B4C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -64,6 +95,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A2228001CE90E2200D88FB3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0A2227FC1CE90E2200D88FB3 /* PragmaticTweetsFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -73,8 +115,14 @@
 		0A2227D31CE8095100D88FB3 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		0A2227D51CE8095100D88FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A2227DD1CE80AAD00D88FB3 /* PragmaticTweepsKeyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PragmaticTweepsKeyboard.storyboard; sourceTree = "<group>"; };
+		0A2227E61CE90E2200D88FB3 /* PragmaticTweetsFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PragmaticTweetsFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2227E81CE90E2200D88FB3 /* PragmaticTweetsFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PragmaticTweetsFramework.h; sourceTree = "<group>"; };
+		0A2227EA1CE90E2200D88FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A2227EF1CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A2227F61CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsFrameworkTests.swift; sourceTree = "<group>"; };
+		0A2227F81CE90E2200D88FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A9700021CDAD76100E6F518 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
-		0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPIRequestUtilities.swift; sourceTree = "<group>"; };
+		0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterAPIRequestUtilities.swift; path = ../PragmaticTweets/TwitterAPIRequestUtilities.swift; sourceTree = "<group>"; };
 		0AA4A3751CD43B0B00A69D42 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		0AB7881B1CAA18CD00858B4C /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB7881E1CAA18CD00858B4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +137,7 @@
 		0AB7883A1CAA18CE00858B4C /* PragmaticTweetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PragmaticTweetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB7883E1CAA18CE00858B4C /* PragmaticTweetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PragmaticTweetsUITests.swift; sourceTree = "<group>"; };
 		0AB788401CAA18CE00858B4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AB788501CAD6C0600858B4C /* ParsedTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedTweet.swift; sourceTree = "<group>"; };
+		0AB788501CAD6C0600858B4C /* ParsedTweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsedTweet.swift; path = ../PragmaticTweets/ParsedTweet.swift; sourceTree = "<group>"; };
 		0AB788581CAD791B00858B4C /* ParsedTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedTweetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,10 +149,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0A2227E21CE90E2200D88FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2227EC1CE90E2200D88FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2227F01CE90E2200D88FB3 /* PragmaticTweetsFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0AB788181CAA18CD00858B4C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2227FB1CE90E2200D88FB3 /* PragmaticTweetsFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +215,26 @@
 			path = PragmaticTweepsKeyboard;
 			sourceTree = "<group>";
 		};
+		0A2227E71CE90E2200D88FB3 /* PragmaticTweetsFramework */ = {
+			isa = PBXGroup;
+			children = (
+				0AB788501CAD6C0600858B4C /* ParsedTweet.swift */,
+				0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */,
+				0A2227E81CE90E2200D88FB3 /* PragmaticTweetsFramework.h */,
+				0A2227EA1CE90E2200D88FB3 /* Info.plist */,
+			);
+			path = PragmaticTweetsFramework;
+			sourceTree = "<group>";
+		};
+		0A2227F51CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A2227F61CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.swift */,
+				0A2227F81CE90E2200D88FB3 /* Info.plist */,
+			);
+			path = PragmaticTweetsFrameworkTests;
+			sourceTree = "<group>";
+		};
 		0A9700011CDAD72600E6F518 /* UserDetailVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,15 +252,6 @@
 			name = RootVC;
 			sourceTree = "<group>";
 		};
-		0A9D23BE1CB986A9007FAE4F /* TwitterUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				0AB788501CAD6C0600858B4C /* ParsedTweet.swift */,
-				0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */,
-			);
-			name = TwitterUtilities;
-			sourceTree = "<group>";
-		};
 		0AA4A3741CD43A9700A69D42 /* TweetDetailVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +267,8 @@
 				0AB788321CAA18CE00858B4C /* PragmaticTweetsTests */,
 				0AB7883D1CAA18CE00858B4C /* PragmaticTweetsUITests */,
 				0A2227D21CE8095100D88FB3 /* PragmaticTweepsKeyboard */,
+				0A2227E71CE90E2200D88FB3 /* PragmaticTweetsFramework */,
+				0A2227F51CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests */,
 				0AB7881C1CAA18CD00858B4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -203,6 +280,8 @@
 				0AB7882F1CAA18CE00858B4C /* PragmaticTweetsTests.xctest */,
 				0AB7883A1CAA18CE00858B4C /* PragmaticTweetsUITests.xctest */,
 				0A2227D11CE8095100D88FB3 /* PragmaticTweepsKeyboard.appex */,
+				0A2227E61CE90E2200D88FB3 /* PragmaticTweetsFramework.framework */,
+				0A2227EF1CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,7 +295,6 @@
 				0AA4A3741CD43A9700A69D42 /* TweetDetailVC */,
 				0A9700011CDAD72600E6F518 /* UserDetailVC */,
 				0A2227CA1CE7DED000D88FB3 /* UserImageDetailVC */,
-				0A9D23BE1CB986A9007FAE4F /* TwitterUtilities */,
 				0AB788221CAA18CD00858B4C /* Main.storyboard */,
 				0AB788251CAA18CD00858B4C /* Assets.xcassets */,
 				0AB788271CAA18CD00858B4C /* LaunchScreen.storyboard */,
@@ -245,6 +323,17 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0A2227E31CE90E2200D88FB3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2227E91CE90E2200D88FB3 /* PragmaticTweetsFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		0A2227D01CE8095100D88FB3 /* PragmaticTweepsKeyboard */ = {
 			isa = PBXNativeTarget;
@@ -257,11 +346,49 @@
 			buildRules = (
 			);
 			dependencies = (
+				0A2228071CE90FEC00D88FB3 /* PBXTargetDependency */,
 			);
 			name = PragmaticTweepsKeyboard;
 			productName = PragmaticTweepsKeyboard;
 			productReference = 0A2227D11CE8095100D88FB3 /* PragmaticTweepsKeyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		0A2227E51CE90E2200D88FB3 /* PragmaticTweetsFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A2227FD1CE90E2200D88FB3 /* Build configuration list for PBXNativeTarget "PragmaticTweetsFramework" */;
+			buildPhases = (
+				0A2227E11CE90E2200D88FB3 /* Sources */,
+				0A2227E21CE90E2200D88FB3 /* Frameworks */,
+				0A2227E31CE90E2200D88FB3 /* Headers */,
+				0A2227E41CE90E2200D88FB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PragmaticTweetsFramework;
+			productName = PragmaticTweetsFramework;
+			productReference = 0A2227E61CE90E2200D88FB3 /* PragmaticTweetsFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0A2227EE1CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A2228011CE90E2200D88FB3 /* Build configuration list for PBXNativeTarget "PragmaticTweetsFrameworkTests" */;
+			buildPhases = (
+				0A2227EB1CE90E2200D88FB3 /* Sources */,
+				0A2227EC1CE90E2200D88FB3 /* Frameworks */,
+				0A2227ED1CE90E2200D88FB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A2227F21CE90E2200D88FB3 /* PBXTargetDependency */,
+				0A2227F41CE90E2200D88FB3 /* PBXTargetDependency */,
+			);
+			name = PragmaticTweetsFrameworkTests;
+			productName = PragmaticTweetsFrameworkTests;
+			productReference = 0A2227EF1CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		0AB7881A1CAA18CD00858B4C /* PragmaticTweets */ = {
 			isa = PBXNativeTarget;
@@ -271,11 +398,13 @@
 				0AB788181CAA18CD00858B4C /* Frameworks */,
 				0AB788191CAA18CD00858B4C /* Resources */,
 				0A2227DC1CE8095100D88FB3 /* Embed App Extensions */,
+				0A2228001CE90E2200D88FB3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0A2227D71CE8095100D88FB3 /* PBXTargetDependency */,
+				0A2227FA1CE90E2200D88FB3 /* PBXTargetDependency */,
 			);
 			name = PragmaticTweets;
 			productName = PragmaticTweets;
@@ -332,6 +461,14 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 4YGNH459X4;
 					};
+					0A2227E51CE90E2200D88FB3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4YGNH459X4;
+					};
+					0A2227EE1CE90E2200D88FB3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0AB7881A1CAA18CD00858B4C;
+					};
 					0AB7881A1CAA18CD00858B4C = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 4YGNH459X4;
@@ -363,6 +500,8 @@
 				0AB7882E1CAA18CE00858B4C /* PragmaticTweetsTests */,
 				0AB788391CAA18CE00858B4C /* PragmaticTweetsUITests */,
 				0A2227D01CE8095100D88FB3 /* PragmaticTweepsKeyboard */,
+				0A2227E51CE90E2200D88FB3 /* PragmaticTweetsFramework */,
+				0A2227EE1CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,6 +512,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A2227DE1CE80AAD00D88FB3 /* PragmaticTweepsKeyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2227E41CE90E2200D88FB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2227ED1CE90E2200D88FB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,9 +560,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A2227DF1CE80FE000D88FB3 /* ParsedTweet.swift in Sources */,
-				0A2227E01CE80FE000D88FB3 /* TwitterAPIRequestUtilities.swift in Sources */,
 				0A2227D41CE8095100D88FB3 /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2227E11CE90E2200D88FB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2228051CE90E8F00D88FB3 /* TwitterAPIRequestUtilities.swift in Sources */,
+				0A2228041CE90E8900D88FB3 /* ParsedTweet.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A2227EB1CE90E2200D88FB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A2227F71CE90E2200D88FB3 /* PragmaticTweetsFrameworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,9 +588,7 @@
 				0A2227C91CE7D06200D88FB3 /* SizeClassOverrideViewController.swift in Sources */,
 				0A2227CC1CE7DF0900D88FB3 /* UserImageDetailViewController.swift in Sources */,
 				0A9700031CDAD76100E6F518 /* UserDetailViewController.swift in Sources */,
-				0A9D23C01CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift in Sources */,
 				0AB788591CAD791B00858B4C /* ParsedTweetCell.swift in Sources */,
-				0AB788511CAD6C0600858B4C /* ParsedTweet.swift in Sources */,
 				0AB788211CAA18CD00858B4C /* RootViewController.swift in Sources */,
 				0AB7881F1CAA18CD00858B4C /* AppDelegate.swift in Sources */,
 				0AA4A3761CD43B0B00A69D42 /* TweetDetailViewController.swift in Sources */,
@@ -452,6 +618,26 @@
 			isa = PBXTargetDependency;
 			target = 0A2227D01CE8095100D88FB3 /* PragmaticTweepsKeyboard */;
 			targetProxy = 0A2227D61CE8095100D88FB3 /* PBXContainerItemProxy */;
+		};
+		0A2227F21CE90E2200D88FB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A2227E51CE90E2200D88FB3 /* PragmaticTweetsFramework */;
+			targetProxy = 0A2227F11CE90E2200D88FB3 /* PBXContainerItemProxy */;
+		};
+		0A2227F41CE90E2200D88FB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB7881A1CAA18CD00858B4C /* PragmaticTweets */;
+			targetProxy = 0A2227F31CE90E2200D88FB3 /* PBXContainerItemProxy */;
+		};
+		0A2227FA1CE90E2200D88FB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A2227E51CE90E2200D88FB3 /* PragmaticTweetsFramework */;
+			targetProxy = 0A2227F91CE90E2200D88FB3 /* PBXContainerItemProxy */;
+		};
+		0A2228071CE90FEC00D88FB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A2227E51CE90E2200D88FB3 /* PragmaticTweetsFramework */;
+			targetProxy = 0A2228061CE90FEC00D88FB3 /* PBXContainerItemProxy */;
 		};
 		0AB788311CAA18CE00858B4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -508,6 +694,70 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.pfefferle.PragmaticTweets.PragmaticTweepsKeyboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0A2227FE1CE90E2200D88FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PragmaticTweetsFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.pfefferle.PragmaticTweetsFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0A2227FF1CE90E2200D88FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PragmaticTweetsFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.pfefferle.PragmaticTweetsFramework;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0A2228021CE90E2200D88FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PragmaticTweetsFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.pfefferle.PragmaticTweetsFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticTweets.app/PragmaticTweets";
+			};
+			name = Debug;
+		};
+		0A2228031CE90E2200D88FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PragmaticTweetsFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.pfefferle.PragmaticTweetsFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PragmaticTweets.app/PragmaticTweets";
 			};
 			name = Release;
 		};
@@ -680,6 +930,22 @@
 			buildConfigurations = (
 				0A2227DA1CE8095100D88FB3 /* Debug */,
 				0A2227DB1CE8095100D88FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0A2227FD1CE90E2200D88FB3 /* Build configuration list for PBXNativeTarget "PragmaticTweetsFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2227FE1CE90E2200D88FB3 /* Debug */,
+				0A2227FF1CE90E2200D88FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0A2228011CE90E2200D88FB3 /* Build configuration list for PBXNativeTarget "PragmaticTweetsFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A2228021CE90E2200D88FB3 /* Debug */,
+				0A2228031CE90E2200D88FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
