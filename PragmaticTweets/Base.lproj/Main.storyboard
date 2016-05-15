@@ -282,10 +282,10 @@
                                 </connections>
                             </button>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3R-4s-VPf">
-                                <rect key="frame" x="20" y="20" width="560" height="522"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="522"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bmQ-iN-KOC">
-                                        <rect key="frame" x="140" y="140" width="280" height="280"/>
+                                        <rect key="frame" x="160" y="140" width="280" height="280"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="280" id="Mbc-RM-9yJ"/>
                                             <constraint firstAttribute="height" constant="280" id="QDa-G7-eYt"/>
@@ -324,10 +324,14 @@
                             <constraint firstItem="K3R-4s-VPf" firstAttribute="centerX" secondItem="SL9-3h-kBQ" secondAttribute="centerX" id="oa7-DU-cs1"/>
                             <constraint firstItem="11B-v1-UW8" firstAttribute="top" secondItem="oPQ-EF-auA" secondAttribute="bottom" constant="20" id="sTo-qJ-Hkp"/>
                             <constraint firstItem="K3R-4s-VPf" firstAttribute="top" secondItem="hkm-0t-rEO" secondAttribute="bottom" id="v7Q-TX-uO3"/>
+                            <constraint firstAttribute="trailing" secondItem="K3R-4s-VPf" secondAttribute="trailing" id="w2d-Ro-9eF"/>
+                            <constraint firstItem="K3R-4s-VPf" firstAttribute="leading" secondItem="SL9-3h-kBQ" secondAttribute="leading" id="zUx-2l-3kY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="K04-1S-Bog"/>
+                                <exclude reference="SfP-WD-uOv"/>
+                                <exclude reference="gnq-KY-HtO"/>
                                 <exclude reference="inP-8U-eqc"/>
                                 <exclude reference="jOy-5v-3s4"/>
                                 <exclude reference="oa7-DU-cs1"/>
