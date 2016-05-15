@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Keyboard View Controller-->
         <scene sceneID="FeL-7b-H3T">
             <objects>
-                <viewController id="9kW-Dj-ol4" sceneMemberID="viewController">
+                <viewController id="9kW-Dj-ol4" customClass="KeyboardViewController" customModule="PragmaticTweepsKeyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zDW-OT-o9M"/>
                         <viewControllerLayoutGuide type="bottom" id="FLD-jS-XVW"/>
@@ -24,7 +24,11 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="Pragmatic Tweeps" id="Vns-6v-Tzp">
-                                        <barButtonItem key="rightBarButtonItem" title="🌎" id="QXl-pf-ruJ"/>
+                                        <barButtonItem key="rightBarButtonItem" title="🌎" id="QXl-pf-ruJ">
+                                            <connections>
+                                                <action selector="nextKeyboardBarButtonTapped:" destination="9kW-Dj-ol4" id="0jK-wB-PRt"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -45,6 +49,10 @@
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="204"/>
+                    <connections>
+                        <outlet property="nextKeyboardBarButton" destination="QXl-pf-ruJ" id="d4H-LI-ijZ"/>
+                        <outlet property="tableView" destination="XxA-NS-rtE" id="RcO-Z7-bW2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zQo-tI-qW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
