@@ -12,6 +12,8 @@
 		0A2227D41CE8095100D88FB3 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2227D31CE8095100D88FB3 /* KeyboardViewController.swift */; };
 		0A2227D81CE8095100D88FB3 /* PragmaticTweepsKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0A2227D11CE8095100D88FB3 /* PragmaticTweepsKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0A2227DE1CE80AAD00D88FB3 /* PragmaticTweepsKeyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2227DD1CE80AAD00D88FB3 /* PragmaticTweepsKeyboard.storyboard */; };
+		0A2227DF1CE80FE000D88FB3 /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB788501CAD6C0600858B4C /* ParsedTweet.swift */; };
+		0A2227E01CE80FE000D88FB3 /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */; };
 		0A9700031CDAD76100E6F518 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9700021CDAD76100E6F518 /* UserDetailViewController.swift */; };
 		0A9D23C01CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9D23BF1CB996FF007FAE4F /* TwitterAPIRequestUtilities.swift */; };
 		0AA4A3761CD43B0B00A69D42 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4A3751CD43B0B00A69D42 /* TweetDetailViewController.swift */; };
@@ -405,6 +407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A2227DF1CE80FE000D88FB3 /* ParsedTweet.swift in Sources */,
+				0A2227E01CE80FE000D88FB3 /* TwitterAPIRequestUtilities.swift in Sources */,
 				0A2227D41CE8095100D88FB3 /* KeyboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
