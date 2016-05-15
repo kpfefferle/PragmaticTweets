@@ -515,7 +515,7 @@
                                         <rect key="frame" x="262" y="207" width="37" height="30"/>
                                         <state key="normal" title="Done"/>
                                         <connections>
-                                            <segue destination="iII-zc-K3U" kind="unwind" unwindAction="unwindToTweetDetailVC:" id="bzQ-3X-6uV"/>
+                                            <segue destination="iII-zc-K3U" kind="unwind" unwindAction="unwindToSizeClassOverrideVC:" id="wxs-cg-bMN"/>
                                         </connections>
                                     </button>
                                 </subviews>
