@@ -53,6 +53,12 @@ class KeyboardViewController: UIInputViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let atName = "@\(tweepNames[indexPath.row])"
+        textDocumentProxy.insertText(atName)
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     func handleTwitterData(data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
         guard let data = data else {
             NSLog("handleTwitterData() recieved no data")
